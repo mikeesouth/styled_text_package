@@ -40,7 +40,7 @@
     text: "Famous equation: E=mc<sup>2</sup>",
     tags: {
       'sup': StyledTextWidgetBuilderTag(
-        (_, attributes, textContent) {
+        (_, attributes, textContent, children) {
           return Transform.translate(
             offset: const Offset(0.5, -4),
             child: Text(

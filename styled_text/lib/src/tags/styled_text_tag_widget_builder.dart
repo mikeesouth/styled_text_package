@@ -7,6 +7,7 @@ typedef StyledTextWidgetBuilderTagCallback = Widget Function(
   BuildContext context,
   Map<String?, String?> attributes,
   String? textContent,
+  List<InlineSpan>? children,
 );
 
 /// A class in which you can specify the widget builder to
@@ -67,7 +68,7 @@ class StyledTextWidgetBuilderTag extends StyledTextTagBase {
     required Map<String?, String?> attributes,
     GestureRecognizer? recognizer,
   }) {
-    Widget widget = builder(context, attributes, textContent);
+    Widget widget = builder(context, attributes, textContent, children);
 
     if (size != null) {
       widget = SizedBox(

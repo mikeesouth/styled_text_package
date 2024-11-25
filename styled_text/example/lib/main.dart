@@ -203,7 +203,7 @@ class DemoPage extends StatelessWidget {
                   text: "Famous equation: E=mc<sup>2</sup>",
                   tags: {
                     'sup': StyledTextWidgetBuilderTag(
-                      (_, attributes, textContent) {
+                      (_, attributes, textContent, children) {
                         return Transform.translate(
                           offset: const Offset(0.5, -4),
                           child: Text(
@@ -223,7 +223,7 @@ class DemoPage extends StatelessWidget {
                   text: "The element of life: H<sub>2</sub>0",
                   tags: {
                     'sub': StyledTextWidgetBuilderTag(
-                      (_, attributes, textContent) {
+                      (_, attributes, textContent, children) {
                         return Transform.translate(
                           offset: const Offset(0.5, 4),
                           child: Text(
